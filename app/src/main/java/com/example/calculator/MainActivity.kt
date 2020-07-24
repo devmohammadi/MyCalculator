@@ -10,9 +10,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var selectedOperation = ""
-    var oldNumber = ""
-    var isNewOperation = true
+    private var selectedOperation = ""
+    private var oldNumber = ""
+    private var isNewOperation = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,52 +32,52 @@ fun clickButtonEvent(view: View) {
     previewEvent(result.text.toString())
 }
 
-fun clearNumber() {
+private fun clearNumber() {
     result.text = "0"
     preview.text = ""
 }
 
-fun setNextNumber(oldNumber: String, selectButton: Button): String {
+private fun setNextNumber(oldNumber: String, selectButton: Button): String {
     var number: String = oldNumber
     when (selectButton.id) {
         btn_zero.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "0"
+            if (number == "0" || number.isEmpty()) number = "0"
             else number += 0
         }
         btn_one.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "1"
+            if (number == "0" || number.isEmpty()) number = "1"
             else number += 1
         }
         btn_two.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "2"
+            if (number == "0" || number.isEmpty()) number = "2"
             else number += 2
         }
         btn_three.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "3"
+            if (number == "0" || number.isEmpty()) number = "3"
             else number += 3
         }
         btn_four.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "4"
+            if (number == "0" || number.isEmpty()) number = "4"
             else number += 4
         }
         btn_five.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "5"
+            if (number == "0" || number.isEmpty()) number = "5"
             else number += 5
         }
         btn_six.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "6"
+            if (number == "0" || number.isEmpty()) number = "6"
             else number += 6
         }
         btn_seven.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "7"
+            if (number == "0" || number.isEmpty()) number = "7"
             else number += 7
         }
         btn_eight.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "8"
+            if (number == "0" || number.isEmpty()) number = "8"
             else number += 8
         }
         btn_nine.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "9"
+            if (number == "0" || number.isEmpty()) number = "9"
             else number += 9
         }
         btn_point.id -> {
@@ -88,7 +88,7 @@ fun setNextNumber(oldNumber: String, selectButton: Button): String {
             }
         }
         btn_sing.id -> {
-            if (number == "0" || number.isNullOrEmpty()) number = "0"
+            if (number == "0" || number.isEmpty()) number = "0"
             else {
                 if (number.first() == '-') number = number.substring(1, number.lastIndex + 1)
                 else number = "-$number"
@@ -147,7 +147,7 @@ fun clearInput(view: View) {
     preview.text = ""
 }
 
-fun previewEvent(res: String) {
+private fun previewEvent(res: String) {
     preview.text = res
 }
 }
