@@ -1,0 +1,62 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="btn_default">
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:layout_margin">7dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="btn_zero" parent="btn_default">
+        <item name="android:layout_weight">2.3</item>
+        <item name="android:layout_width">80dp</item>
+    </style>
+
+    <style name="btn_operation" parent="btn_default">
+        <item name="android:background">@color/btn_operation</item>
+    </style>
+
+    <style name="btn_equals" parent="btn_default">
+        <item name="android:background">@color/btn_equals</item>
+    </style>
+
+    <style name="btn_style_mode">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="input">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="preview" parent="input">
+        <item name="android:textColor">@color/btn_equals</item>
+    </style>
+
+    <style name="width_height">
+        <item name="android:gravity">right</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+</resources>

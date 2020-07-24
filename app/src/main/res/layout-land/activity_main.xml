@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        style="@style/width_height"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/switch1"
+            style="@style/btn_style_mode"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/width_height"
+        android:layout_weight="1"
+        android:orientation="vertical" android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/preview"
+            style="@style/preview" />
+
+        <TextView
+            android:id="@+id/result"
+            style="@style/input"
+            android:text="@string/zero" />
+
+    </LinearLayout>
+
+    <TableLayout style="@style/width_height">
+
+        <TableRow style="@style/width_height">
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/btn_operation"
+                android:onClick="clearInput"
+                android:text="@string/clear" />
+
+            <Button
+                android:id="@+id/btn_sing"
+                style="@style/btn_operation"
+                android:onClick="clickButtonEvent"
+                android:text="@string/sing" />
+
+            <Button
+                android:id="@+id/btn_percentage"
+                style="@style/btn_operation"
+                android:onClick="percentageEvent"
+                android:text="@string/percentage" />
+
+            <Button
+                android:id="@+id/btn_division"
+                style="@style/btn_operation"
+                android:onClick="operationEvent"
+                android:text="@string/division" />
+
+        </TableRow>
+
+        <TableRow style="@style/width_height">
+
+            <Button
+                android:id="@+id/btn_seven"
+                style="@style/btn_default"
+                android:onClick="clickButtonEvent"
+                android:text="@string/seven" />
+
+            <Button
+                android:id="@+id/btn_eight"
+                style="@style/btn_default"
+                android:onClick="clickButtonEvent"
+                android:text="@string/eight" />
+
+            <Button
+                android:id="@+id/btn_nine"
+                style="@style/btn_default"
+                android:onClick="clickButtonEvent"
+                android:text="@string/nine" />
+
+            <Button
+                android:id="@+id/btn_multiply"
+                style="@style/btn_operation"
+                android:onClick="operationEvent"
+                android:text="@string/multiply" />
+
+        </TableRow>
+
+        <TableRow style="@style/width_height">
+
+            <Button
+                android:id="@+id/btn_four"
+                style="@style/btn_default"
+                android:onClick="clickButtonEvent"
+                android:text="@string/four" />
+
+            <Button
+                android:id="@+id/btn_five"
+                style="@style/btn_default"
+                android:onClick="clickButtonEvent"
+                android:text="@string/five" />
+
+            <Button
+                android:id="@+id/btn_six"
+                style="@style/btn_default"
+                android:onClick="clickButtonEvent"
+                android:text="@string/six" />
+
+            <Button
+                android:id="@+id/btn_min"
+                style="@style/btn_operation"
+                android:onClick="operationEvent"
+                android:text="@string/min" />
+
+        </TableRow>
+
+        <TableRow style="@style/width_height">
+
+            <Button
+                android:id="@+id/btn_one"
+                style="@style/btn_default"
+                android:onClick="clickButtonEvent"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/btn_two"
+                style="@style/btn_default"
+                android:onClick="clickButtonEvent"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/btn_three"
+                style="@style/btn_default"
+                android:onClick="clickButtonEvent"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/btn_sum"
+                style="@style/btn_operation"
+                android:onClick="operationEvent"
+                android:text="@string/sum" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <LinearLayout
+        style="@style/width_height"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_zero"
+            style="@style/btn_zero"
+            android:onClick="clickButtonEvent"
+            android:text="@string/zero" />
+
+        <Button
+            android:id="@+id/btn_point"
+            style="@style/btn_default"
+            android:onClick="clickButtonEvent"
+            android:text="@string/point" />
+
+        <Button
+            android:id="@+id/btn_equals"
+            style="@style/btn_equals"
+            android:onClick="equalsEvent"
+            android:text="@string/equals" />
+    </LinearLayout>
+
+</LinearLayout>
